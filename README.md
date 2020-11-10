@@ -11,28 +11,28 @@ $ git clone https://github.com/greyhoundforty/digitalocean-fastmail-terraform.gi
 $ cd digitalocean-fastmail-terraform
 ```
 
-**Step 2: Update example `.tfvars` file**
+**Step 2: Update example `.tfvars` file**  
 You will need to update the `terraform.tfvars.example` and then rename it so that Terraform picks up the variables. The file has comments for each item that you need to provide. When done updating the file rename it:
 
 ```shell
 $ cp terraform.tfvars.example terraform.tfvars
 ```
 
-**Step 3: Initialize Terraform**
+**Step 3: Initialize Terraform**  
 The `version.tf` file will automatically download the most up to date version of the IBM Cloud Terraform Provider when you initialize the directory.
 
 ```shell
 $ terraform init
 ```
 
-**Step 4: Create Terraform plan**
+**Step 4: Create Terraform plan**  
 If the `terraform init` command completed without error you are now ready to create a plan for your deployment.
 
 ```shell
 $ terraform plan -out default.tfplan
 ```
 
-**Step 5: Apply generated plan**
+**Step 5: Apply generated plan**  
 If our plan generated successfully we can now deploy our resources using the `apply` command.
 
 ```shell
